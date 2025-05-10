@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reel Crafters | Faceless Viral Reels for Astrology Content Creators</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(to bottom, #0f172a, #1e293b);
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+        
+        .cosmic-bg {
+            background: linear-gradient(to bottom, #0f172a, #1e293b);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(to right, #f59e0b, #d97706);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 5s infinite;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        
+        .card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .planet {
+            border-radius: 50%;
+            background: linear-gradient(to right, #8b5cf6, #6366f1);
+            position: absolute;
+            opacity: 0.7;
+            z-index: -1;
+        }
+        
+        .service-icon {
+            background: linear-gradient(to right, #f59e0b, #d97706);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem auto;
+        }
+        
+        .testimonial-card {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+        
+        .price-card {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .price-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .zodiac-bg {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='rgba(255,255,255,0.05)'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .cta-button {
+            background: linear-gradient(to right, #f59e0b, #d97706);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Added animations */
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .slide-up {
+            animation: slideUp 0.8s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .slide-right {
+            animation: slideRight 0.8s ease-out;
+        }
+        
+        @keyframes slideRight {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .rotate-slow {
+            animation: rotateSlow 15s linear infinite;
+        }
+        
+        @keyframes rotateSlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .limited-offer {
+            background: linear-gradient(to right, #d97706, #b45309);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 10px;
+            animation: pulse 2s infinite;
+        }
+        
+        .instagram-showcase {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Create stars dynamically -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.body;
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.width = `${Math.random() * 3}px`;
+                star.style.height = star.style.width;
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 300}%`;
+                star.style.animationDelay = `${Math.random() * 5}s`;
+                container.appendChild(star);
+            }
+            
+            // Add animation classes after page load
+            setTimeout(() => {
+                document.querySelectorAll('.animate-on-load').forEach((el, index) => {
+                    setTimeout(() => {
+                        el.classList.add('fade-in');
+                    }, index * 200);
+                });
+            }, 300);
+        });
+    </script>
+
+    <!-- Header Section -->
+    <header class="relative overflow-hidden">
+        <div class="planet rotate-slow" style="width: 300px; height: 300px; top: -150px; right: -100px;"></div>
+        <div class="planet rotate-slow" style="width: 200px; height: 200px; bottom: -50px; left: -100px;"></div>
+        
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center animate-on-load">
+            <div class="flex items-center">
+                <img src="https://i.postimg.cc/hGKttKMj/file-000000008c5c61f782d33de1ac4e6a10.png" alt="Reel Crafters Logo" class="h-12">
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#services" class="text-gray-300 hover:text-white transition">Services</a>
+                <a href="#pricing" class="text-gray-300 hover:text-white transition">Pricing</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-white transition">Testimonials</a>
+                <a href="#portfolio" class="text-gray-300 hover:text-white transition">Portfolio</a>
+                <a href="#contact" class="text-gray-300 hover:text-white transition">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <div class="container mx-auto px-6 py-16 text-center relative z-10">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-on-load slide-up">Viral Faceless Content for <span class="gradient-text">Astrology Creators</span></h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-gray-300 animate-on-load slide-up">We help you consistently go viral with faceless content that builds trust, drives DMs, and boosts paid bookings.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4 animate-on-load">
+                <a href="#pricing" class="cta-button px-8 py-3 rounded-full font-semibold text-white">View Our Packages</a>
+                <a href="#contact" class="bg-transparent border-2 border-amber-500 px-8 py-3 rounded-full font-semibold text-white hover:bg-amber-500/20 transition">Book Discovery Call</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- For Who Section -->
+    <section class="py-16 cosmic-bg zodiac-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-10 text-center animate-on-load">Who This Is For</h2>
+            <div class="flex flex-wrap justify-center gap-6">
+                <div class="card p-6 rounded-xl w-full md:w-64 text-center animate-on-load slide-up">
+                    <div class="service-icon">
+                        <i class="fas fa-star text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">100K-300K Followers</h3>
+                    <p class="text-gray-300">Astrology creators with an established audience ready to scale</p>
+                </div>
+                <div class="card p-6 rounded-xl w-full md:w-64 text-center animate-on-load slide-up">
+                    <div class="service-icon">
+                        <i class="fas fa-gem text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Service Providers</h3>
+                    <p class="text-gray-300">Creators selling readings, courses, memberships or consulting</p>
+                </div>
+                <div class="card p-6 rounded-xl w-full md:w-64 text-center animate-on-load slide-up">
+                    <div class="service-icon">
+                        <i class="fas fa-video text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Camera-shy Stars</h3>
+                    <p class="text-gray-300">Want to grow without being on camera every day</p>
+                </div>
+                <div class="card p-6 rounded-xl w-full md:w-64 text-center animate-on-load slide-up">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-semibold mb-2">Ready to Scale</h3>
+                    <p class="text-gray-300">Looking to boost views, followers, and client DMs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 cosmic-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-2 text-center animate-on-load">What We Deliver</h2>
+            <p class="text-center text-gray-300 mb-10 max-w-2xl mx-auto animate-on-load">Our comprehensive service packages designed specifically for astrology content creators</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <div class="card p-8 rounded-xl animate-on-load slide-right">
+                    <div class="mb-6">
+                        <i class="fas fa-video text-amber-500 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Done-For-You Faceless Viral Reels</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-500 mr-2 mt-1"></i>
+                            <span>We handle everything: idea, script, editing, captions, and uploading (if needed)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-500 mr-2 mt-1"></i>
+                            <span>Built around what works right now in the astrology niche</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-500 mr-2 mt-1"></i>
+                            <span>Designed to attract views and turn cold followers into hot leads</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="card p-8 rounded-xl animate-on-load slide-right">
+                    <div class="mb-6">
+                        <i class="fas fa-chart-pie text-amber-500 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Platform Strategy Support</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-500 mr-2 mt-1"></i>
+                            <span>Caption hooks, hashtag suggestions, and strategic posting timing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-500 mr-2 mt-1"></i>
+                            <span>Monthly trend insights specific to astrology and spirituality</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-500 mr-2 mt-1"></i>
+                            <span>Data-backed formats, not guesswork</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="card p-8 rounded-xl animate-on-load slide-right">
+                    <div class="mb-6">
+                        <i class="fas fa-mask text-amber-500 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">No Camera Required</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-500 mr-2 mt-1"></i>
+                            <span>Reels are fully faceless, designed using viral formats</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-500 mr-2 mt-1"></i>
+                            <span>Professional voiceovers, visuals, and text</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-500 mr-2 mt-1"></i>
+                            <span>You stay behind the scenes, while the content works for you</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="py-16 cosmic-bg zodiac-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-2 text-center animate-on-load">Why Astrology Creators Love Us</h2>
+            <p class="text-center text-gray-300 mb-10 max-w-2xl mx-auto animate-on-load">Our specialized approach delivers results for spiritual content creators</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                <div class="card p-6 rounded-xl animate-on-load slide-up">
+                    <div class="flex items-start">
+                        <div class="mr-4 text-amber-500 text-2xl">
+                            <i class="fas fa-battery-full"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold mb-2">No Burnout</h3>
+                            <p class="text-gray-300">Let your content grow your brand, while you focus on serving your clients</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card p-6 rounded-xl animate-on-load slide-up">
+                    <div class="flex items-start">
+                        <div class="mr-4 text-amber-500 text-2xl">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold mb-2">Designed for Growth</h3>
+                            <p class="text-gray-300">We use data-backed formats, not guesswork</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card p-6 rounded-xl animate-on-load slide-up">
+                    <div class="flex items-start">
+                        <div class="mr-4 text-amber-500 text-2xl">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold mb-2">More Sales</h3>
+                            <p class="text-gray-300">Our hooks and visuals are crafted to drive real client inquiries</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card p-6 rounded-xl animate-on-load slide-up">
+                    <div class="flex items-start">
+                        <div class="mr-4 text-amber-500 text-2xl">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold mb-2">Tailored to Your Niche</h3>
+                            <p class="text-gray-300">We work only with astrology, spirituality, and wellness creators</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 cosmic-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-2 text-center animate-on-load">Two Powerful Options</h2>
+            <p class="text-center text-gray-300 mb-10 max-w-2xl mx-auto animate-on-load">Choose the package that fits your content creation needs</p>
+            
+            <div class="flex flex-col lg:flex-row gap-8 justify-center">
+                <div class="price-card p-8 rounded-xl w-full lg:w-1/2 flex flex-col animate-on-load slide-right">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold mb-2">Faceless Reels Growth Pack</h3>
+                        <p class="text-gray-300 mb-4">Perfect for: Creators who want plug-and-play virality, without the camera stress</p>
+                        <h4 class="text-3xl font-bold text-amber-500 mb-2">₹15,999</h4>
+                        <p class="text-gray-400">bulk batch + ongoing trend updates</p>
+                        <div class="limited-offer mt-3 pulse">
+                            <i class="fas fa-bolt mr-1"></i> Before 15 May 2025 get an exclusive 5,000 OFF for the first month
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="font-semibold mb-4 text-lg">Includes:</h4>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-amber-500 mr-3 mt-1"></i>
+                                <span>15 Viral-Optimized Faceless Reels (one-time batch)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-amber-500 mr-3 mt-1"></i>
+                                <span>+5 Bonus Trending Reels Per Month (fresh content based on current trends)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-amber-500 mr-3 mt-1"></i>
+                                <span>Scripts, editing, captions, and posting-ready files delivered</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-amber-500 mr-3 mt-1"></i>
+                                <span>Platform-friendly formats (Instagram, YouTube Shorts, etc.)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-amber-500 mr-3 mt-1"></i>
+                                <span>Hashtag & caption strategy included</span>
+                            </li>
+                        </ul>
+                        <p class="mt-4 text-gray-400 italic">Want posting help? Just ask  we can do that too.</p>
+                    </div>
+                    <div class="mt-8">
+                        <a href="#contact" class="cta-button block text-center px-8 py-3 rounded-full font-semibold text-white">Get Started</a>
+                    </div>
+                </div>
+                
+                <div class="price-card p-8 rounded-xl w-full lg:w-1/2 flex flex-col animate-on-load slide-right">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold mb-2">Custom Creator Projects</h3>
+                        <p class="text-gray-300 mb-4">Perfect for: Creators who want a mix of Facecam + Faceless edits or customized deliverables</p>
+                        <h4 class="text-3xl font-bold text-amber-500 mb-2">Starting at ₹12,999</h4>
+                        <p class="text-gray-400">per project</p>
+                    </div>
+                    <div class="flex-grow">
+                        <h4 class="font-semibold mb-4 text-lg">How It Works:</h4>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="bg-amber-500 rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1">
+                                    <span class="text-black font-semibold">1</span>
+                                </div>
+                                <span>We hop on a quick strategy call</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-amber-500 rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1">
+                                    <span class="text-black font-semibold">2</span>
+                                </div>
+                                <span>You tell us exactly what you want (e.g., 10 Faceless Reels + 10 Facecam Edits)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-amber-500 rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1">
+                                    <span class="text-black font-semibold">3</span>
+                                </div>
+                                <span>We scope it, quote it, and deliver like clockwork</span>
+                            </li>
+                        </ul>
+                        <p class="mt-6 italic text-gray-400">Flexible formats. No retainers. Just results.</p>
+                    </div>
+                    <div class="mt-8">
+                        <a href="#contact" class="bg-transparent border-2 border-amber-500 block text-center px-8 py-3 rounded-full font-semibold text-white hover:bg-amber-500/20 transition">Book Discovery Call</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 card p-6 rounded-xl max-w-3xl mx-auto animate-on-load">
+                <h3 class="text-xl font-bold mb-4 text-center"> Bonus Support:</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="bg-amber-500/20 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-chart-bar text-amber-500"></i>
+                        </div>
+                        <p>Weekly trend reports (what's hot in spiritual content)</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-amber-500/20 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-bolt text-amber-500"></i>
+                        </div>
+                        <p>Fast-response edits or caption tweaks</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-amber-500/20 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-cogs text-amber-500"></i>
+                        </div>
+                        <p>Personal content system you can keep</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 cosmic-bg zodiac-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-2 text-center animate-on-load">Trusted by Astrology's Rising Stars</h2>
+            <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto animate-on-load">See how our content has helped these creators grow their audience and business</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card overflow-hidden animate-on-load slide-up">
+                    <div class="relative h-72">
+                        <img src="https://i.postimg.cc/hjZV1hQW/Astrologistar.jpg" alt="Astrologistar" class="object-cover w-full h-full">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900 to-transparent p-4">
+                            <h3 class="font-bold">Anil Gupta</h3>
+                            <div class="flex items-center gap-2">
+                                <span class="text-sm">@astrologistar</span>
+                                <span class="bg-amber-500 text-black text-xs px-2 py-1 rounded-full font-semibold">332K Followers</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex mb-3 text-amber-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-4">"Since working with Reel Crafters, my engagement has doubled and I've been able to focus more on my readings. The faceless content performs just as well as when I was on camera every day!"</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card overflow-hidden animate-on-load slide-up">
+                    <div class="relative h-72">
+                        <img src="https://i.postimg.cc/cHtfT0Rv/Lady-Astrologer.jpg" alt="Lady Astrologer" class="object-cover w-full h-full">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900 to-transparent p-4">
+                            <h3 class="font-bold">Ayushi Joshi</h3>
+                            <div class="flex items-center gap-2">
+                                <span class="text-sm">@lady_astrologer07</span>
+                                <span class="bg-amber-500 text-black text-xs px-2 py-1 rounded-full font-semibold">309K Followers</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex mb-3 text-amber-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-4">"Their team understands astrology content on a deep level. The reels they create drive actual consultations and course sales, not just empty views."</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card overflow-hidden animate-on-load slide-up">
+                    <div class="relative h-72">
+                        <img src="https://i.postimg.cc/hGbrTS0c/Astro-Karan.jpg" alt="Astro Karan" class="object-cover w-full h-full">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900 to-transparent p-4">
+                            <h3 class="font-bold">Karan Deep</h3>
+                            <div class="flex items-center gap-2">
+                                <span class="text-sm">@astro_karan</span>
+                                <span class="bg-amber-500 text-black text-xs px-2 py-1 rounded-full font-semibold">26K Followers</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex mb-3 text-amber-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-4">"I grew from 10K to 26K in just two months with their faceless content strategy. The best part is I can focus on my one-on-one client sessions while still growing my audience."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Showcase Section (NEW) -->
+    <section class="py-16 cosmic-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-8 text-center animate-on-load">Real Results on Instagram</h2>
+            
+            <div class="instagram-showcase animate-on-load slide-up">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="text-center md:text-left">
+                        <h3 class="text-2xl font-bold mb-4 gradient-text">Viral Performance Proof</h3>
+                        <p class="text-lg mb-6">Our content consistently drives views, engagement, and most importantly - new client bookings for our astrology creators.</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-amber-500 mr-3 mt-1"></i>
+                                <span>Multiple videos hitting 1M+ views</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-amber-500 mr-3 mt-1"></i>
+                                <span>Consistent growth in follower count</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-amber-500 mr-3 mt-1"></i>
+                                <span>DMs that convert to paid bookings</span>
+                            </li>
+                        </ul>
+                        <a href="https://www.instagram.com/yts_reelcrafters/" target="_blank" class="cta-button inline-flex items-center px-6 py-3 rounded-full font-semibold text-white">
+                            <i class="fab fa-instagram mr-2"></i> Follow Us on Instagram
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-1 gap-4">
+                        <img src="https://i.postimg.cc/GmZC8qqf/Astro-T-1.jpg" alt="Instagram profile screenshot" class="w-full rounded-lg shadow-lg">
+                        <img src="https://i.postimg.cc/RVcm6jWn/IMG-20250501-201108-1.jpg" alt="Instagram profile screenshot" class="w-full rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 cosmic-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-2 text-center animate-on-load">Our Work</h2>
+            <p class="text-center text-gray-300 mb-10 max-w-2xl mx-auto animate-on-load">Sample reels we've created for astrology content creators</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card p-4 rounded-xl animate-on-load slide-up">
+                    <div class="aspect-w-9 aspect-h-16 mb-4">
+                        <iframe src="https://www.youtube.com/embed/QwUpVuLyxWI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-96 rounded-lg"></iframe>
+                    </div>
+                    <h3 class="font-bold">Astrologistar 8M+ Views</h3>
+                    <p class="text-gray-300">Faceless content with cosmic visuals and professional voiceover</p>
+                </div>
+                
+                <div class="card p-4 rounded-xl animate-on-load slide-up">
+                    <div class="aspect-w-9 aspect-h-16 mb-4">
+                        <iframe src="https://www.youtube.com/embed/yee-UySbxhY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-96 rounded-lg"></iframe>
+                    </div>
+                    <h3 class="font-bold">Birth on 6,15,24</h3>
+                    <p class="text-gray-300">Educational content that drives follower growth and inquiries</p>
+                </div>
+                
+                <div class="card p-4 rounded-xl animate-on-load slide-up">
+                    <div class="aspect-w-9 aspect-h-16 mb-4">
+                        <iframe src="https://www.youtube.com/embed/4p6pjvVb544" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-96 rounded-lg"></iframe>
+                    </div>
+                    <h3 class="font-bold">Trending Content</h3>
+                    <p class="text-gray-300">Styled to match current platform trends and algorithms</p>
+                </div>
+                
+                <div class="card p-4 rounded-xl animate-on-load slide-up">
+                    <div class="aspect-w-9 aspect-h-16 mb-4">
+                        <iframe src="https://www.youtube.com/embed/tdah5oeIRr4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-96 rounded-lg"></iframe>
+                    </div>
+                    <h3 class="font-bold">Wealthy and Luxurious Life</h3>
+                    <p class="text-gray-300">Content that attracts high-ticket clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section (Updated with WhatsApp Button) -->
+    <section id="contact" class="py-16 cosmic-bg zodiac-bg">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="card p-8 md:p-12 rounded-xl text-center animate-on-load">
+                <h2 class="text-3xl font-bold mb-4">Ready to Scale Without the Spotlight?</h2>
+                <p class="text-xl mb-8">Let your faceless content do the heavy lifting.</p>
+                
+                <div class="flex flex-col md:flex-row gap-6 justify-center mb-8">
+                    <a href="https://www.instagram.com/yts_reelcrafters/" target="_blank" class="flex items-center justify-center bg-gradient-to-r from-purple-500 to-pink-500 p-4 rounded-xl hover:opacity-90 transition">
+                        <i class="fab fa-instagram text-2xl text-white mr-3"></i>
+                        <div class="text-left text-white">
+                            <p class="text-sm">Follow Us</p>
+                            <p class="font-semibold">Instagram</p>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/918235143996?text=FACELIFT" target="_blank" class="flex items-center justify-center bg-gradient-to-r from-green-500 to-green-600 p-4 rounded-xl hover:opacity-90 transition pulse">
+                        <i class="fab fa-whatsapp text-2xl text-white mr-3"></i>
+                        <div class="text-left text-white">
+                            <p class="text-sm">WhatsApp</p>
+                            <p class="font-semibold">FACELIFT</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="mt-8 max-w-md mx-auto">
+                    <h3 class="text-xl font-bold mb-4">Or Book a Free Call</h3>
+                    <a href="https://wa.me/918235143996?text=Schedule%20Astro%20discovery%20call" class="cta-button block w-full px-8 py-4 rounded-full font-semibold text-white text-lg">
+                        <i class="fas fa-calendar-alt mr-2"></i> Schedule Discovery Call
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 cosmic-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-2 text-center animate-on-load">Frequently Asked Questions</h2>
+            <p class="text-center text-gray-300 mb-10 max-w-2xl mx-auto animate-on-load">Everything you need to know about our services</p>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="card p-6 rounded-xl animate-on-load slide-up">
+                    <h3 class="font-bold mb-2">How long does it take to deliver the reels?</h3>
+                    <p class="text-gray-300">For the Faceless Reels Growth Pack, we deliver your first batch within 10-14 days of onboarding. Trending reels are delivered on a regular schedule each month.</p>
+                </div>
+                
+                <div class="card p-6 rounded-xl animate-on-load slide-up">
+                    <h3 class="font-bold mb-2">Do I need to provide any footage or voiceovers?</h3>
+                    <p class="text-gray-300">Not at all! Our faceless content packages include everything - visuals, voiceovers, music, and text. You can stay completely behind the scenes.</p>
+                </div>
+                
+                <div class="card p-6 rounded-xl animate-on-load slide-up">
+                    <h3 class="font-bold mb-2">How do you ensure the content aligns with my astrology brand?</h3>
+                    <p class="text-gray-300">During onboarding, we study your existing content and have you complete a detailed questionnaire about your brand voice, audience, and business goals. This ensures all content feels authentic to your brand.</p>
+                </div>
+                
+                <div class="card p-6 rounded-xl animate-on-load slide-up">
+                    <h3 class="font-bold mb-2">What if I need revisions to the reels?</h3>
+                    <p class="text-gray-300">We include two rounds of revisions with each package to ensure you're completely satisfied with the final product.</p>
+                </div>
+                
+                <div class="card p-6 rounded-xl animate-on-load slide-up">
+                    <h3 class="font-bold mb-2">Can I use these reels across multiple platforms?</h3>
+                    <p class="text-gray-300">Absolutely! We provide files optimized for Instagram, TikTok, YouTube Shorts, and other platforms so you can maximize your reach.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 cosmic-bg">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <img src="https://i.postimg.cc/hGKttKMj/file-000000008c5c61f782d33de1ac4e6a10.png" alt="Reel Crafters Logo" class="h-10">
+                </div>
+                <div class="flex space-x-4">
+                    <a href="https://www.instagram.com/yts_reelcrafters/" target="_blank" class="text-gray-300 hover:text-white">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://wa.me/918235143996" target="_blank" class="text-gray-300 hover:text-white">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-6 text-center text-gray-400 text-sm">
+                <p>© 2023 Reel Crafters. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
